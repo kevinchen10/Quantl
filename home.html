@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0e0e0e" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e0e0e'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%2358C4DD' stroke-width='2.5'/%3E%3Cpath d='M16 6 A10 10 0 0 1 26 16' fill='none' stroke='%23FFFF00' stroke-width='2.5'/%3E%3C/svg%3E" />
+    <title>QuantL: The Daily Math Game</title>
+    <script type="module" crossorigin src="./assets/home-fCjD_hnZ.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/rng-c1sZ0g33.js">
+    <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-WkwZ5CU-.js">
+    <link rel="modulepreload" crossorigin href="./assets/anim-BRg1IUY-.js">
+    <link rel="modulepreload" crossorigin href="./assets/wordmark-D_G0kYGl.js">
+    <link rel="stylesheet" crossorigin href="./assets/anim-T8s_czkJ.css">
+    <link rel="stylesheet" crossorigin href="./assets/home-QNkRWdza.css">
+  </head>
+  <body>
+    <div id="app" class="home" aria-busy="true">
+      <span class="chip">Test home page</span>
+      <main>
+        <h1 class="sr">QuantL</h1>
+        <canvas id="wordmark" class="wordmark" role="img" aria-label="QuantL, drawn over and over by a Fourier series of rotating vectors"></canvas>
+        <div class="rule" aria-hidden="true"></div>
+        <p class="tagline">The Daily Math Game</p>
+        <p class="day" id="day"></p>
+        <ol class="rings" id="rings" aria-label="Six rounds"></ol>
+        <a class="start" id="start" href="#" target="_blank" rel="noopener">Start</a>
+      </main>
+      <footer class="note">The word is one closed loop: the letters’ outlines joined into a single line. <span id="terms"></span>, each spinning at a whole-number speed, add up tip to tail to trace it.</footer>
+    </div>
+  </body>
+</html>

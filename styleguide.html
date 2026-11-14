@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>QuantL · Animation primitives &amp; style guide</title>
+    <script type="module" crossorigin src="./assets/styleguide-Bb0apbD3.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/rng-c1sZ0g33.js">
+    <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-WkwZ5CU-.js">
+    <link rel="modulepreload" crossorigin href="./assets/anim-BRg1IUY-.js">
+    <link rel="stylesheet" crossorigin href="./assets/anim-T8s_czkJ.css">
+    <link rel="stylesheet" crossorigin href="./assets/styleguide-BadaV8uf.css">
+  </head>
+  <body>
+    <div id="app" aria-busy="true">
+      <header class="hero">
+        <div class="stage hero-stage" id="hero-stage" aria-label="QuantL title animation"></div>
+        <div class="hero-meta">
+          <span>Step 1 of 6 · animation primitives &amp; style guide</span>
+          <button class="ghost" id="hero-replay" type="button">Replay</button>
+        </div>
+      </header>
+      <main>
+        <section>
+          <h2><span class="num">1</span>Palette</h2>
+          <p class="lede">
+            Eight colours on near-black. Each one has a single job in every round, so the visual language only has to be learned once.
+            Blue and teal look alike, so they never appear side by side as a contrast.
+          </p>
+          <div class="swatches" id="swatches"></div>
+        </section>
+
+        <section>
+          <h2><span class="num">2</span>Type</h2>
+          <div class="type-grid" id="type"></div>
+        </section>
+
+        <section>
+          <h2><span class="num">3</span>Motion</h2>
+          <div class="motion-layout">
+          <ul class="rules">
+            <li><b>Motion explains the math.</b> If a movement doesn’t carry meaning, it doesn’t happen.</li>
+            <li><b>Easing is smooth ease-in-out</b>, usually 0.4–1.2 s. No bounce, no springs, no shadows, no gradients.</li>
+            <li><b>Groups ripple in</b> with a lagged start. They never pop in all at once.</li>
+            <li><b>Every round ends in a reveal:</b> truth beside guess, the score ticks up, then a skippable 5–12 s “why”.</li>
+          </ul>
+          <div id="motion-demos"></div>
+          </div>
+        </section>
+
+        <section>
+          <h2><span class="num">4</span>Primitives</h2>
+          <p class="lede">
+            Each card is a live scene built from the reusable primitives in <code>src/anim</code>. Scenes play when scrolled into view.
+            <em>Skip</em> jumps to the end, the same mechanism that makes each round’s explanation skippable.
+          </p>
+          <div class="grid" id="primitive-demos"></div>
+        </section>
+      </main>
+      <footer>
+        <p>
+          Everything on this page is code: Bézier paths, KaTeX glyph outlines and a small timeline library. Nothing is drawn by hand or
+          pre-rendered. The game itself is <a href="./index.html">index.html</a>.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

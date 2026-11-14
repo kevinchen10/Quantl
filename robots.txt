@@ -1,0 +1,4 @@
+# QuantL: search engines are welcome to index the pages.
+# Bulk collection of puzzles, answers or other data by automated means is not allowed (see /terms.html).
+User-agent: *
+Allow: /

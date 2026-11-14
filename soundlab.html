@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0e0e0e" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230e0e0e'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%2358C4DD' stroke-width='2.5'/%3E%3Cpath d='M16 6 A10 10 0 0 1 26 16' fill='none' stroke='%23FFFF00' stroke-width='2.5'/%3E%3C/svg%3E" />
+    <title>QuantL · sound lab</title>
+    <script type="module" crossorigin src="./assets/soundlab-BL7brbIB.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/rng-c1sZ0g33.js">
+    <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-WkwZ5CU-.js">
+    <link rel="modulepreload" crossorigin href="./assets/anim-BRg1IUY-.js">
+    <link rel="modulepreload" crossorigin href="./assets/audio-DnTv5Ghs.js">
+    <link rel="stylesheet" crossorigin href="./assets/anim-T8s_czkJ.css">
+    <link rel="stylesheet" crossorigin href="./assets/soundlab-CxHcE7wK.css">
+  </head>
+  <body>
+    <div id="app" aria-busy="true">
+      <header class="lab-head">
+        <h1>QuantL <span class="dim">· sound lab</span></h1>
+        <p class="lede">
+          Every sound here is synthesized live in your browser: no recordings, no samples. The music is original, written in the spirit of the
+          3Blue1Brown soundtrack (soft piano over warm, slow chords) rather than copied from it. Headphones or decent speakers help: much of it is
+          quiet and low.
+        </p>
+      </header>
+      <main>
+        <section class="card">
+          <h2><span class="num">1</span>Music <span class="dim">· not in the game for now</span></h2>
+          <p class="note">
+            An endless bed in D major. Slow major-7th and add-9 chords drift from one to the next by a few rules, so it never loops. A felt piano
+            plays notes from the pentatonic scale over the top. Two styles to compare. Left out of the game for now (by decision); kept here
+            in case it comes back.
+          </p>
+          <div class="row">
+            <button id="music-toggle" class="primary" type="button">Play music</button>
+            <div class="seg" role="group" aria-label="Music style">
+              <button type="button" data-style="calm" aria-pressed="true">Calm<small>sparse piano, 60 bpm</small></button>
+              <button type="button" data-style="flow" aria-pressed="false">Flow<small>rolling arpeggio, 72 bpm</small></button>
+            </div>
+            <span class="now" aria-live="polite"><span class="dim">chord</span> <span id="chord">–</span></span>
+          </div>
+          <div class="sliders">
+            <label><span>Music volume</span><input type="range" id="vol-music" min="0" max="1" step="0.01" value="0.55" /></label>
+            <label><span>Effects volume</span><input type="range" id="vol-sfx" min="0" max="1" step="0.01" value="0.85" /></label>
+            <label><span>Brightness <span class="dim">(calm → reveal)</span></span><input type="range" id="bright" min="0" max="1" step="0.01" value="0.25" /></label>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2><span class="num">2</span>Sound effects</h2>
+          <p class="note">Each one plays with the matching animation, at the game’s real timing. The picture stays in view as you scroll.</p>
+        </section>
+        <div class="fx-wrap">
+          <div class="lab-stage" id="lab-stage" aria-hidden="true"></div>
+          <section class="card">
+            <h2><span class="num">NEW</span>For your review <span class="dim">· not in the game yet</span></h2>
+            <p class="note">
+              The grade pop, a sound for the zero-matrix transition, and four options for Quick Math’s right answers. Each is the real timing; the
+              pictures are small sketches.
+            </p>
+          </section>
+          <div class="fx-list" id="new-list"></div>
+          <section class="card">
+            <h2><span class="num">2b</span>Already in the game</h2>
+          </section>
+          <div class="fx-list" id="fx-list"></div>
+          <section class="card">
+            <h2><span class="num">3</span>In sequence</h2>
+            <p class="note">How they follow one another in a round.</p>
+            <div class="fx-list" id="seq-list"></div>
+          </section>
+        </div>
+      </main>
+      <footer class="lab-foot">QuantL · sounds for approval</footer>
+    </div>
+  </body>
+</html>
